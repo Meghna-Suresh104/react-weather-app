@@ -1,0 +1,108 @@
+/* Keep previous styles */
+.weather {
+    width: 300px;
+    border-radius: 6px;
+    box-shadow: 10px -2px 20px 2px rgb(0 0 0 / 30%);
+    color: aliceblue;
+    background-color: hsla(0, 3%, 6%, 0.5); 
+
+    margin: 20px auto 0 auto;
+    padding: 0 20px 20px 20px;
+}
+
+.top, .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.city {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.weather-description {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1;
+    margin: 0;
+}
+
+.weather-icon {
+    width: 100px;
+}
+
+.temperature {
+    font-weight: 600;
+    font-size: 70px;
+    width: auto;
+    letter-spacing: -5;
+}
+
+.details {
+    width: 100%;
+    padding-left: 20px;
+}
+
+.parameter-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.parameter-label {
+    text-align: left;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.parameter-value {
+    text-align: right;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+
+.toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    font-weight: bold;
+    gap: 10px;
+}
+
+.slider-toggle {
+    width: 50px;
+    height: 24px;
+    background-color: #ccc;
+    border-radius: 12px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.slider-toggle.active {
+    background-color: #666;
+}
+
+.slider-toggle:hover {
+    background-color: #b3b3b3;
+}
+
+.slider-circle {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 3px;
+    transition: transform 0.3s ease;
+}
+
+.slide-right {
+    transform: translateX(26px);
+}

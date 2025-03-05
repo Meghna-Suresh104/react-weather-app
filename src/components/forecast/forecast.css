@@ -1,0 +1,91 @@
+.title {
+    font-size: 23px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    color: #eee8e8;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.forecast-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px; 
+    padding: 20px; 
+    scroll-behavior: smooth;
+    justify-content: flex-start; 
+    align-items: center; 
+    width: 100%; 
+}
+
+
+.forecast-grid::-webkit-scrollbar {
+    display: none;
+}
+
+
+.forecast-item {
+    width: 180px;
+    height: 180px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    cursor: pointer;
+    flex-shrink: 0; 
+    perspective: 1000px; 
+}
+
+
+.forecast-item.flipped {
+    transform: rotateY(180deg);
+}
+
+
+.forecast-item .front,
+.forecast-item .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    background-color: #eee8e8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 5px;
+}
+
+
+.forecast-item .front {
+    background-color: hsla(0, 14%, 85%, 0.5); 
+
+}
+
+
+.forecast-item .back {
+    transform: rotateY(180deg);
+    background-color: hsla(0, 41%, 93%, 0.5); 
+}
+
+
+.icon-small {
+    width: 50px;
+}
+
+
+.day {
+    font-weight: 600;
+    margin-top: 5px;
+    font-size: 18px;
+}
+
+
+.min-max {
+    color: #706767;
+    font-size: 14px;
+    margin-top: 5px;
+}
