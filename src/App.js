@@ -54,7 +54,8 @@ function App() {
     <div className="container">
       {}
       <video autoPlay muted loop className="background-video" key={backgroundVideo}>
-        <source src={process.env.PUBLIC_URL + backgroundVideo} type="video/mp4" />
+      <source src={`${process.env.PUBLIC_URL}${backgroundVideo}`} type="video/mp4" />
+
       </video>
       
       <Search onSearchChange={handleOnSearchChange} />
